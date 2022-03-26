@@ -12,12 +12,12 @@ const Products = () => {
         {id: 5, price: 280, name: 'Rowl', img: 'https://img.freepik.com/free-vector/wall-office-clock-with-black-red-hands-white-dial_1284-8992.jpg?t=st=1648266215~exp=1648266815~hmac=d9793d8c42011bc07c4921ab911d186bac0ced71c4e4f5795fde2beddde8a8ca&w=740'},
         {id: 6, price: 450, name: 'Hero', img: 'https://img.freepik.com/free-vector/watch_53876-35132.jpg?t=st=1648266215~exp=1648266815~hmac=5b5cc09fa49bbddc1cc4a16aa2e2f4c2364f77cfc96eec36afa23b93cb230cfb&w=740'},
         {id: 7, price: 300, name: 'Creative', img: 'https://img.freepik.com/free-vector/watch_53876-35137.jpg?w=740'},
-        {id: 8, name: 'State', img: 'https://img.freepik.com/free-photo/businessman-checking-time_1357-97.jpg?t=st=1648266215~exp=1648266815~hmac=9bd2206d0c99b6bad1b09e7db6d917e79c65769d561b18c8a7485ac8c37810a5&w=826'},
+        {id: 8, price: 290, name: 'State', img: 'https://img.freepik.com/free-photo/businessman-checking-time_1357-97.jpg?t=st=1648266215~exp=1648266815~hmac=9bd2206d0c99b6bad1b09e7db6d917e79c65769d561b18c8a7485ac8c37810a5&w=826'},
         {id: 9, price: 390, name: 'Free Touch', img: 'https://img.freepik.com/free-psd/presentation-smartwatch-with-screen-mock-up_23-2148787546.jpg?t=st=1648266215~exp=1648266815~hmac=735b02218866d96a7e920d79692bbad06acfbb03a1b3ad39b9aaf8b2b6a10559&w=740'}
     ]
     return (
         <div className='body'>
-            <div className='card'>
+            <div className='cards'>
                 {
                     datas.map(data => <Collection 
                     key = {data.id}
