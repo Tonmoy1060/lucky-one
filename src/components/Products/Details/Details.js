@@ -1,9 +1,10 @@
 import React from 'react';
+import './Details.css'
 
-const Details = () => {
+const Details = (props) => {
     return (
-        <div>
-            <p>This is details</p>
+        <div className='details-text'>
+            <h3>{props.name}</h3>
         </div>
     );
 };

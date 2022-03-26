@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Collection from './Collection/Collection';
 import Details from './Details/Details';
 import './Products.css'
@@ -15,6 +15,14 @@ const Products = () => {
         {id: 8, price: 290, name: 'State', img: 'https://img.freepik.com/free-photo/businessman-checking-time_1357-97.jpg?t=st=1648266215~exp=1648266815~hmac=9bd2206d0c99b6bad1b09e7db6d917e79c65769d561b18c8a7485ac8c37810a5&w=826'},
         {id: 9, price: 390, name: 'Free Touch', img: 'https://img.freepik.com/free-psd/presentation-smartwatch-with-screen-mock-up_23-2148787546.jpg?t=st=1648266215~exp=1648266815~hmac=735b02218866d96a7e920d79692bbad06acfbb03a1b3ad39b9aaf8b2b6a10559&w=740'}
     ]
+    const [cart, setCart] = useState([]);
+    const selectItem = (data) => {
+        const newData = [...cart, data];
+        setCart(newData);
+    }
+    const removeButton = () =>{
+        setCart([])
+    }
     return (
         <div className='body'>
             <div className='cards'>
@@ -22,11 +30,22 @@ const Products = () => {
                     datas.map(data => <Collection 
                     key = {data.id}
                     data ={data}
+                    selectItem = {selectItem}
                     ></Collection>)
                 }
             </div>
             <div className='details'>
-                <Details></Details>
+                <h2 >Picked Items</h2>
+                {
+                    cart.map(data => <Details
+                        key = {data.id}
+                        name = {data.name}
+                    ></Details>)
+                }
+                <div className='btns'>
+                    <button className='btn'>Select</button>
+                    <button onClick={removeButton} className='btn'>Remove</button>
+                </div>
             </div>
         </div>
     );

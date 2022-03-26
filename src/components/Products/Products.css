@@ -5,7 +5,7 @@
 .cards{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 45px;
+    gap: 30px;
     margin: 30px;
     padding:50px;
     background-color: bisque;
@@ -16,4 +16,12 @@
     padding: 20px;
     border-radius: 10px;
     margin: 30px 30px 30px 0; 
+}
+.btns .btn{
+    margin-bottom: 5px;
+}
+@media screen and (max-width: 900px) {
+    .cards{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
