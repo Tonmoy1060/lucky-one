@@ -1,0 +1,7 @@
+.cards{
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.cards img{
+    width: 300px;
+}
